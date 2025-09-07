@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favorite Movies | My Portfolio</title>
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="movies.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">MyJourney</div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about_me.html">About Me</a></li>
+                <li><a href="games.html">Favorite Game</a></li>
+                <li><a href="movies.html" class="active">Favorite Movies</a></li>
+                <li><a href="photobooth.html">Photobooth</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li class="theme-switch">
+                    <span>Dark Mode</span>
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page-content">
+            <h1>My Favorite Movies & TV Shows</h1>
+            <p>Here are some of the trending movies that I enjoy. These films and shows are a huge source of inspiration for me, and I love exploring their stories and visual worlds.</p>
+            
+            <section class="slider-container">
+                <div id="movies" class="movie-slider">
+                    </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>Contact me:</p>
+        <ul class="socials">
+            <li>Email: <a href="mailto:teobal1221@gmail.com">teobal1221@gmail.com</a></li>
+            <li>Phone: +40 751 011 052</li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Instagram</a></li>
+        </ul>
+        <p>&copy; 2025 My Portfolio</p>
+    </footer>
+
+    <div id="review-popup" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-btn" data-close-target="#review-popup">&times;</span>
+            <h2 id="review-title"></h2>
+            
+            <form id="review-form">
+                <div class="form-group">
+                    <label for="review-author">Numele tău:</label>
+                    <input type="text" id="review-author" name="author" placeholder="Ex: Alex" required />
+                </div>
+                <div class="form-group">
+                    <label for="review-text">Recenzia ta:</label>
+                    <textarea id="review-text" name="review" rows="5" placeholder="Scrie aici o recenzie..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="review-rating">Rating:</label>
+                    <input type="range" id="review-rating" name="rating" min="1" max="5" value="5" class="slider-input" />
+                    <span id="rating-value">5</span>/5
+                </div>
+                <button type="submit" class="submit-btn">Trimite Recenzie</button>
+            </form>
+            
+            <h3>Recenzii:</h3>
+            <div id="review-list">
+                </div>
+        </div>
+    </div>
+
+    <script src="home.js"></script>
+    <script src="movies.js"></script>
+</body>
+</html>

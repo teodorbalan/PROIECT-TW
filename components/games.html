@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Games | My Portfolio</title>
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="games.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">MyJourney</div>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about_me.html">About Me</a></li>
+        <li><a href="games.html" class="active">Favorite Game</a></li>
+        <li><a href="movies.html">Favorite Movies</a></li>
+        <li><a href="photobooth.html">Photobooth</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li class="theme-switch">
+          <span>Dark Mode</span>
+          <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+          </label>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-content">
+      <h1>My Game Inspirations & Creations</h1>
+      <p>
+        Here, I celebrate some of the classic games that ignited my passion for game development.
+        These iconic titles from my childhood not only provided countless hours of fun but also
+        served as a profound source of inspiration, pushing me to learn and create my own virtual worlds.
+        Click on any image below to experience a game that influenced my journey!
+      </p>
+
+      <div class="games-container">
+        <div class="game-item">
+          <a href="game1.html" class="game-link" data-game-title="2048 Game">
+            <img src="../assets/2048.png" alt="2048 Game">
+          </a>
+          <p class="game-title-text">2048 Game</p>
+        </div>
+
+        <div class="game-item">
+          <a href="game2.html" class="game-link" data-game-title="Archery Game">
+            <img src="../assets/archery.png" alt="Archery Game">
+          </a>
+          <p class="game-title-text">Archery Game</p>
+        </div>
+
+        <div class="game-item">
+          <a href="game3.html" class="game-link" data-game-title="Fruit Slicer">
+            <img src="../assets/fruit_ninja.png" alt="Fruit Slicer">
+          </a>
+          <p class="game-title-text">Fruit Slicer</p>
+        </div>
+
+        <div class="game-item">
+          <a href="game4.html" class="game-link" data-game-title="Minesweeper">
+            <img src="../assets/minesweaper.png" alt="Minesweeper">
+          </a>
+          <p class="game-title-text">Minesweeper</p>
+        </div>
+
+        <div class="game-item">
+          <a href="game5.html" class="game-link" data-game-title="Tetris Game">
+            <img src="../assets/tetris.png" alt="Tetris Game">
+          </a>
+          <p class="game-title-text">Tetris Game</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="game-popup" class="popup-container">
+    <div class="popup-content">
+      <span class="close-btn">&times;</span>
+      <h2 id="popup-title"></h2>
+      <iframe id="game-iframe" src="" frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <footer>
+    <p>Contact me:</p>
+    <ul class="socials">
+            <li>Email: <a href="mailto:teobal1221@gmail.com">teobal1221@gmail.com</a></li>
+      <li>Phone: +40 751 011 052</li>
+      <li><a href="#">LinkedIn</a></li>
+      <li><a href="#">Instagram</a></li>
+    </ul>
+    <p>&copy; 2025 My Portfolio</p>
+  </footer>
+
+  <script src="games.js"></script>
+  <script src="home.js"></script>
+</body>
+</html>

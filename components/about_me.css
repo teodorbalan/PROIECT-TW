@@ -1,0 +1,96 @@
+.about-hero {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    padding: 4rem;
+    background-color: var(--card-light);
+    color: var(--text-light);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-info {
+    margin-top: 1.5rem;
+    font-size: 1em;
+}
+
+.profile-photo-about {
+    text-align: center;
+}
+
+.profile-photo-about img {
+    max-width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.profile-photo-about img:hover {
+    transform: scale(1.05);
+}
+
+.about-sections-container {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-section {
+    background-color: var(--card-light);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.about-section h2 {
+    font-size: 2em;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--accent-light);
+    padding-bottom: 0.5rem;
+}
+
+.content-box p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+body.dark-mode .about-hero {
+    background-color: var(--card-dark);
+    color: var(--text-dark);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .about-section {
+    background-color: var(--card-dark);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .about-section h2 {
+    border-bottom: 2px solid var(--accent-dark);
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .profile-photo-about {
+        order: -1;
+    }
+}

@@ -1,0 +1,185 @@
+.page-content {
+  padding: 2rem;
+  text-align: center;
+  background: #f0fff0
+}
+
+.page-content h1,
+.page-content p {
+  margin-bottom: 2rem;
+}
+
+.slider-container {
+  overflow: hidden; 
+  position: relative;
+  width: 100%;
+}
+
+.movie-slider {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  animation: movie-scroll 30s linear infinite; 
+}
+
+.movie-item {
+  flex-shrink: 0; 
+  text-align: center;
+  min-width: 250px;
+  max-width: 300px;
+  color: var(--text-light);
+  transition: transform 0.4s ease, filter 0.4s ease 0.2s;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.movie-item:hover {
+  transform: scale(1.05) translateY(-5px); 
+  filter: brightness(1.2);
+}
+
+.movie-item::before {
+  content: "🎬"; 
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 2rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.movie-item:hover::before {
+  opacity: 1;
+}
+
+.movie-img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.title {
+  padding: 1rem;
+  font-weight: bold;
+}
+
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.popup-overlay.is-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: #00c3ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0099cc;
+}
+
+/* Stiluri pentru recenzii */
+.review-item {
+    border-bottom: 1px solid #eee;
+    padding: 1rem 0;
+    position: relative;
+}
+
+.review-item p {
+    margin: 0.5rem 0;
+}
+
+.review-delete {
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+}
+
+@keyframes movie-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% + 250px)); 
+  }
+}
+
+@media (max-width: 768px) {
+  .movie-slider {
+    animation-duration: 20s; 
+  }
+}
+
+.dark-mode .movie-item {
+  color: var(--text-dark);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
